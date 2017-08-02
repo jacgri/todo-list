@@ -1,6 +1,6 @@
 var bodyParser = require('body-parser')
 
-var toDos = require('../models/ToDo.js')
+var ToDo = require('../models/ToDo.js')
 
 var urlencodedParser = bodyParser.urlencoded({extended: false})
 
@@ -29,7 +29,7 @@ function toDoController (app) {
     })
 
     function renderToDos (res) {
-        toDo.find({}, function (error, results) {
+        ToDo.find({}, function (error, results) {
             if (error) {
                 throw new Error(error)
             }
