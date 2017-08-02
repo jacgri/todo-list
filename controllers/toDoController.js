@@ -6,8 +6,13 @@ var urlencodedParser = bodyParser.urlencoded({extended: false})
 
 function toDoController (app) {
     app.get('/', function (req, res){
-        res.render('home', {
-            toDos: toDos.getItems()
+        toDo.find({}, function (error, results) {
+            if (error) {
+                throw new Error(error)
+            }
+                res.render('home', {
+                toDos: results
+            })
         })
     })
     app.post('/', urlencodedParser, function(req, res){
