@@ -1,3 +1,11 @@
+require('dotenv').config()
+
+var mongoose = require('mongoose')
+
+mongoose.connect(process.env.DATABASE_URL, {
+    useMongoClient: true
+})
+
 var express = require('express')
 
 var app = express ()
