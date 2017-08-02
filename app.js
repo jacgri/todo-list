@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 var mongoose = require('mongoose')
-
+console.log (process.env)
 mongoose.connect(process.env.DATABASE_URL, {
     useMongoClient: true
 })
