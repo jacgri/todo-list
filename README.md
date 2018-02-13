@@ -9,7 +9,7 @@ Task for week 9 of MCRcodes to implement learning of the following:
 * Handlebars templating engine
 * Mongoose - an ODM (Object Document Mapper) - to talk to our database
 
-# Set up and Runnong
+# Set up and Running
 Clone this git repository 
 Install nodemon globally `npm install -g nodemon`
 Run `npm install` to install dependencies
